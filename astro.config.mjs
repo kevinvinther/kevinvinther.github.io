@@ -9,7 +9,8 @@ import tailwind from '@astrojs/tailwind';
 
 // Astro configuration
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://kevinvinther.github.io',
+  base: 'astro',
 
   markdown: {
     syntaxHighlight: 'prism',
