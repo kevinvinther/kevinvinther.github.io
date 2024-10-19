@@ -1,9 +1,17 @@
 ---
 import Navigation from './Navigation.astro';
+import Social from './Social.astro'
 ---
 <header>
   <nav class="border-gray-200">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <Navigation /></div>
+<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div class="left-side">
+        <Navigation />
+      </div>
+      <div class="right-side ml-auto">
+        <Social platform="github", username="kevinvinther"/>
+      </div>
+    </div>
   </nav>
 </header>
+
