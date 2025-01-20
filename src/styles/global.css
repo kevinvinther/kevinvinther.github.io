@@ -3,80 +3,78 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans; /* This will apply the Cormorant font globally */
-  font-size: 1.4rem;
-  line-height: 2.0rem;
+    @apply font-sans;
+    font-size: 1.4rem;
+    line-height: 2rem;
 }
 
-
-        /* 'h1': '2.25rem', // Equivalent to 36px
-        'h2': '1.875rem', // Equivalent to 30px
-        'h3': '1.5rem', // Equivalent to 24px
-        'h4': '1.25rem', // Equivalent to 20px
-        'h5': '1.125rem', // Equivalent to 18px
-        'h6': '1rem', // Equivalent to 16px */
 h1 {
-  font-size: 2.25rem;
+    font-size: 2.25rem;
 }
 h2 {
-  font-size: 1.875rem;
+    font-size: 1.875rem;
 }
 h3 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 h4 {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 h5 {
-  font-size: 1.125rem;
+    font-size: 1.125rem;
 }
 h6 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 body {
 }
 
-h1, h2, h3, h4, h5, h6 {
-  padding-top: 0.5em;
-  font-weight: bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-top: 0.5em;
+    font-weight: bold;
 }
 
 sup {
-  color: gray;
-  font-size: 1.0em;
-
+    color: gray;
+    font-size: 1em;
 }
 img {
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-padding: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
 }
 
-ul, ol {
-  margin-left: 1rem; /* Adds space to the left of lists */
-  padding-left: 1rem; /* Adds padding to the left of lists */
-  list-style-position: inside; /* Keeps bullets/numbers inside the padding */
+ul,
+ol {
+    margin-left: 1rem; /* Adds space to the left of lists */
+    padding-left: 1rem; /* Adds padding to the left of lists */
+    list-style-position: inside; /* Keeps bullets/numbers inside the padding */
 }
 
 ul {
-  list-style-type: disc; /* Adds bullets */
+    list-style-type: disc; /* Adds bullets */
 }
 
 ol {
-  list-style-type: decimal; /* Adds numbering */
+    list-style-type: decimal; /* Adds numbering */
 }
 
 li {
-  margin: 0.5rem 0; /* Adds space above and below each list item */
-}
-li:hover {
-  font-weight: bold;
+    margin: 0.5rem 0; /* Adds space above and below each list item */
 }
 
 p {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+a {
+    color: #003049;
 }

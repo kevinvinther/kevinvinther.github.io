@@ -1,7 +1,178 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout pageTitle={pageTitle}>
-  Nothing here yet:)
+
+<BaseLayout pageTitle="">
+  <p><b>Hi, I'm Kevin - Welcome to my Portfolio!</b></p>
+
+  <p>
+    I'm a passionate software developer with a strong foundation in computer
+    science. My expertise spans various programming paradigms, including
+    object-oriented, functional, and low-level programming, along with practical
+    experience in software engineering.
+  </p>
+
+  <h2>Side Projects</h2>
+  Projects I've developed during my freetime, away from studies.
+  <br />
+  <br />
+
+  <!-- Projects -->
+  <div class="projects">
+    <div class="project">
+      <h3>A Pong Implementation In Rust</h3>
+      <a href="https://github.com/kevinvinther/pong">GitHub Link</a>
+      <ul>
+        <li>Recreated the classic Pong game in Rust with the Bevy engine.</li>
+        <li>Added scoring and collaborated with another developer.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Pomodoro TUI tool in Rust</h3>
+      <a href="https://github.com/PlotoZypresse/Tomato">GitHub Link</a>
+      <ul>
+        <li>
+          Built a terminal-based Pomodoro timer in Rust with another developer.
+        </li>
+        <li>
+          Used GitHub issues and pull requests for collaborative development.
+        </li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Obsidian to Org Roam File Converter</h3>
+      <a href="https://github.com/kevinvinther/obsidian-to-org">GitHub Link</a>
+      <ul>
+        <li>
+          CLI tool using Pandoc to convert Obsidian Markdown files to Org Mode
+          with Roam syntax.
+        </li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Discord Bot to Store Minecraft Coordinates</h3>
+      <a href="https://github.com/kevinvinther/MC-Coordinates">GitHub Link</a>
+      <ul>
+        <li>
+          Python Discord bot storing Minecraft coordinates in a SQLite database.
+        </li>
+        <li>Supports adding, updating, deleting, and searching coordinates.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Custom startpage</h3>
+      <a href="https://github.com/kevinvinther/startpage">GitHub Link</a>
+      <ul>
+        <li>Built a custom React startpage with dynamic link management.</li>
+        <li>
+          Developed an Express backend with a SQLite database to store links.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Projects from studies</h2>
+  Projects I've worked on for university courses.
+  <br />
+  <br />
+
+  <!-- Projects -->
+  <div class="projects">
+    <div class="project">
+      <h3>Verification of Leader Election Algorithms</h3>
+      <a href="https://github.com/kevinvinther/BSc">GitHub Link</a>
+      <ul>
+        <li>
+          Formally verified Bully and Ring leader election algorithms with TLA+.
+        </li>
+        <li>
+          Tested robustness under diverse scenarios to improve distributed
+          system reliability.
+        </li>
+        <li>
+          Enhanced skills in formal verification and ensuring correctness in
+          complex systems.
+        </li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Generic Graph Project</h3>
+      <ul>
+        <li>Developed a C++ graph library with DFS and topological sort.</li>
+        <li>Used unit testing to ensure code reliability and scalability.</li>
+        <li>
+          Improved expertise in generic programming and test-driven development.
+        </li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Onitama Simulation Engine in Haskell</h3>
+      <a href="https://github.com/kevinvinther/onitama">GitHub Link</a>
+      <ul>
+        <li>
+          Created a Haskell simulation engine for Onitama using recursive
+          algorithms.
+        </li>
+        <li>
+          Validated all outcomes to showcase functional programming's strengths.
+        </li>
+        <li>
+          Gained deeper experience in functional programming and
+          problem-solving.
+        </li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Custom Filesystem Implementation Using FUSE</h3>
+      <ul>
+        <li>Built a custom POSIX-compliant filesystem with FUSE.</li>
+        <li>Added memory management and state persistence for stability.</li>
+        <li>
+          Developed skills in systems programming and resource management.
+        </li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Counting Sort for Coordinates in Assembly</h3>
+      <a href="https://github.com/kevinvinther/assembly-project">GitHub Link</a>
+      <ul>
+        <li>
+          Implemented Counting Sort in x86 Assembly with file I/O via system
+          calls.
+        </li>
+        <li>Developed a simple memory allocator for efficient resource use.</li>
+        <li>
+          Honed skills in low-level programming and performance optimization.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <br/>
+  You can contact me on <a href="https://www.linkedin.com/in/kevinvinther/">LinkedIn</a>, and see my <a href="https://github.com/kevinvinther">GitHub</a> for more.
+  <br/>
 </BaseLayout>
+
+<style>
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: none;
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .project {
+    flex: 1 1 calc(50% - 10px);
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+  }
+</style>
