@@ -1,80 +1,69 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "./typography.css";
 
-body {
-    @apply font-sans;
-    font-size: 1.4rem;
-    line-height: 2rem;
-}
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-h1 {
-    font-size: 2.25rem;
-}
-h2 {
-    font-size: 1.875rem;
-}
-h3 {
-    font-size: 1.5rem;
-}
-h4 {
-    font-size: 1.25rem;
-}
-h5 {
-    font-size: 1.125rem;
-}
-h6 {
-    font-size: 1rem;
+:root,
+html[data-theme="light"] {
+  --background: #fdfdfd;
+  --foreground: #282728;
+  --accent: #006cac;
+  --muted: #e6e6e6;
+  --border: #ece9e9;
 }
 
-body {
+html[data-theme="dark"] {
+  --background: #212737;
+  --foreground: #eaedf3;
+  --accent: #ff6b01;
+  --muted: #343f60;
+  --border: #ab4b08;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    padding-top: 0.5em;
-    font-weight: bold;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
 }
 
-sup {
-    color: gray;
-    font-size: 1em;
-}
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
-}
-
-ul,
-ol {
-    margin-left: 1rem; /* Adds space to the left of lists */
-    padding-left: 1rem; /* Adds padding to the left of lists */
-    list-style-position: inside; /* Keeps bullets/numbers inside the padding */
-}
-
-ul {
-    list-style-type: disc; /* Adds bullets */
-}
-
-ol {
-    list-style-type: decimal; /* Adds numbering */
+@layer base {
+  * {
+    @apply border-border outline-accent/75;
+    scrollbar-width: auto;
+    scrollbar-color: var(--color-muted) transparent;
+  }
+  html {
+    @apply overflow-y-scroll scroll-smooth;
+  }
+  body {
+    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+  }
+  a,
+  button {
+    @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
 
-li {
-    margin: 0.5rem 0; /* Adds space above and below each list item */
+@utility max-w-app {
+  @apply max-w-3xl;
 }
 
-p {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+@utility app-layout {
+  @apply mx-auto w-full max-w-app px-4;
 }
 
-a {
-    color: #003049;
+.active-nav {
+  @apply underline decoration-wavy decoration-2 underline-offset-4;
+}
+
+/* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 1rem;
 }
